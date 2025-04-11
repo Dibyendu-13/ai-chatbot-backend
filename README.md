@@ -42,6 +42,10 @@ Create a `.env` file in the root directory and add:
 PORT=5001
 OPENAI_API_KEY=your_openai_api_key
 MONGO_DB_CONNECTION_STRING=your_mongodb_connection_string
+
+CLIENT_DEV_ORIGIN=http://localhost:3000
+CLIENT_PROD_ORIGIN=""
+
 ```
 
 ### 4. Start the Server
