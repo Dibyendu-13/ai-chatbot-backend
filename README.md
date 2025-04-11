@@ -60,7 +60,7 @@ By default, it runs on `http://localhost:5001`.
 
 ```json
 {
-  "conversation_id": "abc123", // optional
+  "conversation_id": "abc123", 
   "message": "Hello, how are you?"
 }
 ```
