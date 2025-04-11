@@ -24,8 +24,8 @@ This project provides a simple backend API for managing conversations between a 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/ai-chat-backend.git
-cd ai-chat-backend
+git clone https://github.com/Dibyendu-13/ai-chatbot-backend.git
+cd ai-chatbot-backend
 ```
 
 ### 2. Install Dependencies
