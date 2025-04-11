@@ -12,10 +12,11 @@ const openai = new OpenAI({
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: [process.env.CLIENT_DEV_ORIGIN, process.env.CLIENT_PROD_ORIGIN],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 }));
+
 
 app.use(bodyParser.json());
 
