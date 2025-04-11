@@ -12,10 +12,19 @@ const openai = new OpenAI({
 const app = express();
 
 app.use(cors({
-  origin: [process.env.CLIENT_DEV_ORIGIN, process.env.CLIENT_PROD_ORIGIN],
+  origin: function (origin, callback) {
+    const allowedOrigins = [process.env.CLIENT_DEV_ORIGIN, process.env.CLIENT_PROD_ORIGIN];
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST'],
+  credentials: true,
   allowedHeaders: ['Content-Type'],
 }));
+
 
 
 app.use(bodyParser.json());
